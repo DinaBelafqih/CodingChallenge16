@@ -1,4 +1,4 @@
-// Task 2 - 
+// Task 2 - Fetch Products with .then()
 function fetchProductsThen() {
     fetch('https://www.course-api.com/javascript-store-products')
       .then((response) => {
@@ -49,7 +49,7 @@ function handleError(error) {
 // Call the function to test it
 fetchProductsAsync();
 
-// Task 4  Display the Products
+// Task 4 - Display the Products
 // Helper function to display products
 function displayProducts(products) {
   const container = document.querySelector('#product-container'); // Select the container
@@ -80,4 +80,9 @@ function displayProducts(products) {
     // Append the product div to the container
     container.appendChild(productDiv);
   });
+}
+
+// Task 5 - Reusable Error Handler
+function handleError(error) {
+  console.error(`An error occurred: ${error.message}`);
 }
